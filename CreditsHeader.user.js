@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         CreditsHeader
 // @namespace    http://tampermonkey.net/
-// @version      1.0
+// @version      1.1
 // @description  Anzeige der eingenommen/ausgegebenen Credits in der Kopfzeile
 // @author       itsDreyter
 // @match        https://www.leitstellenspiel.de/
@@ -168,7 +168,7 @@
 
         // create span
         var span = document.createElement('span');
-        span.innerHTML = credits;
+        span.innerHTML = credits.toLocaleString();
 
         // set childs
         a.appendChild(img);
